@@ -59,7 +59,7 @@ To check your api key
 --> [5:52 PM] Sebastian Edenberg
 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
 
-curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer $OPENAI_API_KEY"   -d '{
+curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer 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"   -d '{
     "model": "gpt-4",
     "messages": [
       {
