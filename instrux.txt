@@ -59,7 +59,7 @@ To check your api key
 --> [5:52 PM] Sebastian Edenberg
 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
 
-curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer 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"   -d '{
+curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer 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"   -d '{
     "model": "gpt-4",
     "messages": [
       {
@@ -74,3 +74,17 @@ curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/
   }'
 
 
+
+curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer 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"   -d '{
+    "model": "gpt-4",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Tell me a riddle!!"
+      }
+    ]
+  }'
