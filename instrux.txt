@@ -1,0 +1,74 @@
+connect to your instance
+
+ssh -i .\Hackathon29.pem ec2-user@<your server id>.eu-central-1.compute.amazonaws.com
+
+NGINX
+
+install nginx
+sudo yum install nginx
+
+check if installed
+nginx -v
+
+run the service
+sudo systemctl start nginx.service
+
+check if it is running
+sudo systemctl status nginx.service
+
+Edit the file that should be vissible in browser
+sudo vi /usr/share/nginx/html/index.html
+
+connect to your instance (we have only http)
+http://ec2-3-79-150-211.eu-central-1.compute.amazonaws.com/
+
+
+NODEJS
+
+please use 
+sudo su to install node with proper priviledges
+this hould appear in your console
+[root@ip-...............]
+
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+
+you can test with simple script
+/////////////////////////////////
+var http = require('http');
+
+//create a server object:
+http.createServer(function (req, res) {
+  res.write('** Hackathon mode is on !!!! **'); //write a response to the client
+  res.end(); //end the response
+}).listen(80); //the server object listens on port 80
+/////////////////////////////////
+
+
+PYTHON
+
+sudo su -
+
+install python
+yum install python
+
+verivy working:
+python3 -m http.server 80 --bind 0.0.0.0
+
+
+To check your api key 
+
+curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer $OPENAI_API_KEY"   -d '{
+    "model": "gpt-4",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }'
+
+
