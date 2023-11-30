@@ -57,9 +57,9 @@ python3 -m http.server 80 --bind 0.0.0.0
 
 To check your api key 
 --> [5:52 PM] Sebastian Edenberg
-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
+sk--------------------------
 
-curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer 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"   -d '{
+curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer sk-------------------"   -d '{
     "model": "gpt-4",
     "messages": [
       {
@@ -75,7 +75,7 @@ curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/
 
 
 
-curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer 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"   -d '{
+curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer sk------------------------------"   -d '{
     "model": "gpt-4",
     "messages": [
       {
